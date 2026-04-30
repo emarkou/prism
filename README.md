@@ -17,7 +17,14 @@ GitHub dashboard in your terminal — five live tiles: open PRs, inbox, pending 
 
 ## Install
 
-Requires Python 3.11+. Create a venv first:
+**Via Homebrew:**
+
+```bash
+brew tap emarkou/prism
+brew install gh-prism
+```
+
+**From source** (requires Python 3.11+):
 
 ```bash
 python3.13 -m venv .venv
