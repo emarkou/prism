@@ -1,5 +1,7 @@
 # prism
 
+**PR Insights & System Monitor**
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 GitHub dashboard in your terminal — five live tiles: open PRs, inbox, pending reviews, CI status, contributions.
