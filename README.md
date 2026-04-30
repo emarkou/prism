@@ -1,6 +1,4 @@
-# prism
-
-**PR Insights & System Monitor**
+# Prism (PRs + Insights + System Monitor)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
