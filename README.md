@@ -1,13 +1,14 @@
 # prism
 
-GitHub dashboard in your terminal — four live tiles: open PRs, inbox, CI status, contributions.
+GitHub dashboard in your terminal — five live tiles: open PRs, inbox, pending reviews, CI status, contributions.
 
 ```
-┌──────────────────────┬──────────────────────┐
-│   MY OPEN PRS        │   INBOX              │
-├──────────────────────┼──────────────────────┤
-│   CI STATUS          │   CONTRIBUTIONS      │
-└──────────────────────┴──────────────────────┘
+┌──────────────┬──────────────┬──────────────┐
+│  MY OPEN PRS │  INBOX       │   PENDING    │
+│              ├──────────────│   REVIEWS    │
+│              │  CI STATUS   ├──────────────┤
+│              │              │ CONTRIBUTIONS│
+└──────────────┴──────────────┴──────────────┘
 ```
 
 > Screenshot placeholder
@@ -15,15 +16,34 @@ GitHub dashboard in your terminal — four live tiles: open PRs, inbox, CI statu
 ## Install
 
 ```bash
-pipx install prism
+pip install -e .
 ```
 
 ## Setup
+
+If you use the `gh` CLI and are already logged in, just run:
+
+```bash
+prism
+```
+
+Token is picked up automatically from `gh auth token`. No export needed.
+
+If you're not using `gh`, set the token manually:
 
 ```bash
 export GITHUB_TOKEN=ghp_yourtoken
 prism
 ```
+
+Or add it to `~/.prism/config.toml`:
+
+```toml
+[auth]
+token = "ghp_yourtoken"
+```
+
+Required token scopes: `repo`, `read:user`
 
 ## Config
 
@@ -31,7 +51,7 @@ Config lives at `~/.prism/config.toml` (created on first run).
 
 ```toml
 [auth]
-token = ""  # or use GITHUB_TOKEN env var
+token = ""  # or use GITHUB_TOKEN env var, or gh CLI auth
 
 [display]
 refresh_seconds = 30
@@ -45,8 +65,6 @@ watched = []
 # example:
 # watched = ["myorg/backend", "myorg/frontend"]
 ```
-
-Required token scopes: `repo`, `read:user`
 
 ## Keybindings
 
