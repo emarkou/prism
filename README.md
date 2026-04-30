@@ -11,7 +11,7 @@ GitHub dashboard in your terminal — five live tiles: open PRs, inbox, pending 
 └──────────────┴──────────────┴──────────────┘
 ```
 
-![Feed](docs/screenshots/screenshot.png)
+![Feed](prism/docs/screenshots/screenshot.png)
 
 ## Install
 
