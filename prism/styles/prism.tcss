@@ -1,0 +1,84 @@
+Screen {
+    layout: horizontal;
+}
+
+MyPRsWidget {
+    width: 1fr;
+    height: 100%;
+    border: solid $panel;
+    overflow-y: auto;
+}
+
+MyPRsWidget:focus {
+    border: solid $accent;
+}
+
+#center-col {
+    width: 1fr;
+    height: 100%;
+    layout: vertical;
+}
+
+#right-col {
+    width: 1fr;
+    height: 100%;
+    layout: vertical;
+}
+
+InboxWidget {
+    height: 1fr;
+    border: solid $panel;
+    overflow-y: auto;
+}
+
+InboxWidget:focus {
+    border: solid $accent;
+}
+
+CIStatusWidget {
+    height: 1fr;
+    border: solid $panel;
+    overflow-y: auto;
+}
+
+CIStatusWidget:focus {
+    border: solid $accent;
+}
+
+PendingReviewsWidget {
+    height: 2fr;
+    border: solid $panel;
+    overflow-y: auto;
+}
+
+PendingReviewsWidget:focus {
+    border: solid $accent;
+}
+
+ContributionsWidget {
+    height: 1fr;
+    border: solid $panel;
+    overflow-y: auto;
+}
+
+ContributionsWidget:focus {
+    border: solid $accent;
+}
+
+StatusBar {
+    dock: bottom;
+    height: 1;
+    background: $accent;
+    color: $background;
+    padding: 0 1;
+}
+
+HelpOverlay {
+    align: center middle;
+    background: $surface;
+    border: thick $accent;
+    width: 52;
+    height: auto;
+    padding: 1 2;
+    layer: overlay;
+}
